@@ -1,21 +1,27 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import logo_app from '../../assets/logo_app.jpg'
 import qr_app from '../../assets/qr_app.png'
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 const OverView = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleOpenModal = () => setIsModalOpen(true);
   const handleCloseModal = () => setIsModalOpen(false);
+  useEffect(() => {
+    AOS.init({
+      duration: 1200, // Thời gian hiệu ứng (ms)
+    });
+  }, []);
   return (
-    <div className='relative' id='overview'>
+    <div className='relative' id='overview' data-aos="fade-up">
       <div className='bg-gray-200'>
         <h1 className='text-center text-red-500 text-3xl py-3'>
           Tổng Quan dự án
         </h1>
       </div>
       <section className=''>
-        <div className='max-w-7xl mx-auto'>
+        <div className='max-w-7xl mx-auto' data-aos="fade-right">
           <div className='flex flex-col md:flex-row items-center lg:h-[90vh] justify-between'>
             <div className='md:w-1/2 relative flex '>
               <img src={logo_app} alt="levi" className='lg:h-[60vh] h-96 rounded-2xl' />

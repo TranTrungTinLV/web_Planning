@@ -1,12 +1,11 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Flutter from '../../assets/flutter.png'
 import Dart from '../../assets/dart.jpg'
 import Firebase from '../../assets/firebase.png'
 import Stringee from '../../assets/stringee.png'
 import OSM from '../../assets/osm.png'
-
-
-
+import 'aos/dist/aos.css';
+import AOS from 'aos';
 const About = () => {
   const techDetails = {
     Flutter: {
@@ -37,7 +36,17 @@ const About = () => {
   };
 
   const [selectedTech, setSelectedTech] = useState(null);
-
+  const [fadeKey, setFadeKey] = useState(0);
+  useEffect(() => {
+    AOS.init({
+      duration: 1200, // Thời gian hiệu ứng (ms)
+    });
+  }, []);
+  useEffect(() => {
+    if (selectedTech) {
+      setFadeKey((prevKey) => prevKey + 1);
+    }
+  }, [selectedTech]);
 
   return (
     <div className='relative' id='about'>
@@ -47,12 +56,12 @@ const About = () => {
         </h1>
       </div>
       <section className=''>
-        <div className='max-w-7xl mx-auto'>
+        <div className='max-w-7xl mx-auto' >
           <div className='flex flex-col md:flex-row justify-center items-center lg:h-[80vh]'>
             <div className='grid grid-cols-1 gap-12 lg:grid-cols-2'>
-              <div className='items-center flex'>
+              <div className='items-center flex' >
                 {selectedTech &&
-                  (<div>
+                  (<div data-aos='fade-right' key={fadeKey}>
                     <h3 className='text-2xl font-semibold text-blue-500'> {techDetails[selectedTech].title}</h3>
                     <p className='mt-4 text-lg text-white font-thin text-justify'>
                       {techDetails[selectedTech].description}
@@ -63,7 +72,7 @@ const About = () => {
               </div>
               <div className=' border border-red-200 bg-gray-800 rounded-lg p-8 flex flex-col gap-8 items-center shadow-lg shadow-gray-700'>
                 <h3 className='text-2xl font-bold text-indigo-400'>Công Nghệ Chính Trong Phát Triển Ứng Dụng</h3>
-                <div className='grid grid-cols-2 sm:grid-cols-3 gap-6'>
+                <div className='grid grid-cols-2 sm:grid-cols-3 gap-6' data-aos='fade-right'>
                   {Object.keys(techDetails).map((tech) => (
                     <div
                       key={tech}

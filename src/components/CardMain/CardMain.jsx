@@ -1,14 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import hero from '../../assets/avatar.jpg'
 import facebook from '../../assets/facebook.png'
 import github from '../../assets/github.png'
-
+import 'aos/dist/aos.css';
+import AOS from 'aos';
 const CardMain = () => {
+  useEffect(() => {
+    AOS.init({
+      duration: 1200, // Thời gian hiệu ứng (ms)
+    });
+  }, []);
   return (
 
 
-    <section className='relative'>
-      <div className='max-w-7xl mx-auto'>
+    <section className='relative' >
+      <div className='max-w-7xl mx-auto'  data-aos="fade-right">
         <div className='flex flex-col md:flex-row items-center lg:h-[90vh] justify-between'>
           <div className='md:w-1/2 mb-8 md:mb-0 flex flex-col space-y-4 px-6 lg:px-0 lg:mt-0 mt-10'>
             <h1 className='lg:text-7xl text-4xl font-bold lg:leading-snug text-white'>
