@@ -21,9 +21,9 @@ const OverView = () => {
         </h1>
       </div>
       <section className=''>
-        <div className='max-w-7xl mx-auto' data-aos="fade-right">
+        <div className='max-w-7xl mx-auto  p-5' data-aos="fade-right">
           <div className='flex flex-col md:flex-row items-center lg:h-[90vh] justify-between'>
-            <div className='md:w-1/2 relative flex '>
+            <div className='md:w-1/2 relative flex'>
               <img src={logo_app} alt="levi" className='lg:h-[60vh] h-96 rounded-2xl' />
             </div>
             <div className='md:w-1/2 mb-8 md:mb-0 flex flex-col space-y-4 px-6 lg:px-0 lg:mt-0 mt-10'>

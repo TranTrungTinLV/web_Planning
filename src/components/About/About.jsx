@@ -56,7 +56,7 @@ const About = () => {
         </h1>
       </div>
       <section className=''>
-        <div className='max-w-7xl mx-auto' >
+        <div className='max-w-7xl mx-auto p-5' >
           <div className='flex flex-col md:flex-row justify-center items-center lg:h-[70vh]'>
             <div className='grid grid-cols-1 gap-12 lg:grid-cols-2'>
               <div className='items-center flex' >
@@ -72,7 +72,7 @@ const About = () => {
               </div>
               <div className=' border border-red-200 bg-gray-800 rounded-lg p-8 flex flex-col gap-8 items-center shadow-lg shadow-gray-700'>
                 <h3 className='text-2xl font-bold text-indigo-400'>Công Nghệ Chính Trong Phát Triển Ứng Dụng</h3>
-                <div className='grid grid-cols-2 sm:grid-cols-3 gap-6' data-aos='fade-right'>
+                <div className='grid grid-cols-1  md:grid-cols-3 sm:grid-cols-1 gap-6' data-aos='fade-right'>
                   {Object.keys(techDetails).map((tech) => (
                     <div
                       key={tech}
@@ -110,7 +110,7 @@ const About = () => {
           <div className='max-w-4xl mx-auto'>
             <div className="overflow-x-auto  shadow-md rounded-lg">
               <table className="table-auto w-full text-sm text-left text-gray-500">
-                <thead className="text-xs text-white">
+                <thead className="text-xs sm:text-xs text-white">
                   <tr>
                     <th scope="col" className="px-6 py-3">
                       API
