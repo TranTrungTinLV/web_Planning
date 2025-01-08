@@ -14,8 +14,6 @@ const Navbar = () => {
           <nav className='md:flex hidden items-center space-x-6 text-lg '>
             <a href="#about" className=' text-white'>About</a>
             <a href="#overview" className=' text-white'>Overview</a>
-            <a href="#testimonials" className=' text-white'>Testimonials</a>
-            <a href="#contact" className=' text-white'>Contact</a>
           </nav>
         </div>
 
