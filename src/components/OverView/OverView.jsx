@@ -10,7 +10,7 @@ const OverView = () => {
   const handleCloseModal = () => setIsModalOpen(false);
   useEffect(() => {
     AOS.init({
-      duration: 1200, // Thời gian hiệu ứng (ms)
+      duration: 1200,
     });
   }, []);
   return (
@@ -28,10 +28,10 @@ const OverView = () => {
             </div>
             <div className='md:w-1/2 mb-8 md:mb-0 flex flex-col space-y-4 px-6 lg:px-0 lg:mt-0 mt-10'>
               <div className='mx-auto max-w-xl flex flex-col'>
-                <p className='text-gray-100 mt-3 text-2xl text-justify'>
+                <p className='text-gray-100 mt-3 text-lg text-justify'>
                   Ứng dụng đa năng hỗ trợ người dùng trong việc lập kế hoạch và quản lý sự kiện một cách dễ dàng và hiệu quả. Được phát triển với các tính năng mạnh mẽ, ứng dụng tập trung vào việc đơn giản hóa các công việc thường ngày liên quan đến lập kế hoạch sự kiện.
                 </p>
-                <div className='flex justify-start mt-5  md:mt-5 md:justify-end  w-1/3'>
+                <div className='flex justify-start mt-5  md:mt-5'>
                   <button onClick={handleOpenModal} className='bg-red-500 hover:p-3 text-white px-3 py-2 w-max rounded-md' data-modal-target='modal' data-modal-toggle="modal"><a>
                     Tải App</a>
                   </button>
@@ -48,12 +48,13 @@ const OverView = () => {
         <div
           className='fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50'
           onClick={handleCloseModal}
+          data-aos='fade-up'
         >
           <div
             className='bg-white p-4 rounded-lg shadow-lg relative'
-            onClick={(e) => e.stopPropagation()} // Ngăn đóng modal khi click vào bên trong
+            onClick={(e) => e.stopPropagation()}
           >
-            {/* Header */}
+
             <div className='flex items-center justify-between p-4 border-b'>
 
               <button
@@ -64,8 +65,7 @@ const OverView = () => {
               </button>
             </div>
 
-            {/* Content */}
-            <div className='p-4 space-y-4'>
+            <div className='p-4 space-y-4' >
               <img src={qr_app} alt="" />
               <p className='text-base text-gray-500 ml-2'>
                 Link app: <a href="http://surl.li/homybw" className='underline text-blue-400'>Tại đây</a>

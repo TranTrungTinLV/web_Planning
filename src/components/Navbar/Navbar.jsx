@@ -9,7 +9,7 @@ const Navbar = () => {
       <div className=' max-w-7xl mx-auto flex h-14 items-center'>
         <div className='md:mr-4 flex justify-between w-full'>
           <a href="#" className='mr-6 flex items-center space-x-2 font-italian text-4xl text-purple-500'>
-            Levi
+            iPlanning
           </a>
           <nav className='md:flex hidden items-center space-x-6 text-lg '>
             <a href="#about" className=' text-white'>About</a>

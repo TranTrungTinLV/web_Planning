@@ -57,7 +57,7 @@ const About = () => {
       </div>
       <section className=''>
         <div className='max-w-7xl mx-auto' >
-          <div className='flex flex-col md:flex-row justify-center items-center lg:h-[80vh]'>
+          <div className='flex flex-col md:flex-row justify-center items-center lg:h-[90vh]'>
             <div className='grid grid-cols-1 gap-12 lg:grid-cols-2'>
               <div className='items-center flex' >
                 {selectedTech &&

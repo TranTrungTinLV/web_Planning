@@ -4,6 +4,7 @@ import CardMain from "./components/CardMain/CardMain"
 import Navbar from "./components/Navbar/Navbar"
 import OverView from "./components/OverView/OverView"
 import Particle from "./Particle/Particle"
+import Footer from "./components/Footer/Footer"
 function App() {
   useEffect(() => {
     const handleScrollClick = (event) => {
@@ -37,6 +38,7 @@ function App() {
       <CardMain />
       <OverView />
       <About />
+      <Footer />
     </>
   )
 }
