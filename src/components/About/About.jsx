@@ -49,7 +49,7 @@ const About = () => {
   }, [selectedTech]);
 
   return (
-    <div className='relative' id='about'>
+    <div className='relative' id='about' data-aos='fade-right'>
       <div className='bg-gray-200'>
         <h1 className='text-center text-red-500 text-3xl py-3'>
           Về dự án
@@ -57,7 +57,7 @@ const About = () => {
       </div>
       <section className=''>
         <div className='max-w-7xl mx-auto' >
-          <div className='flex flex-col md:flex-row justify-center items-center lg:h-[90vh]'>
+          <div className='flex flex-col md:flex-row justify-center items-center lg:h-[70vh]'>
             <div className='grid grid-cols-1 gap-12 lg:grid-cols-2'>
               <div className='items-center flex' >
                 {selectedTech &&
@@ -102,10 +102,48 @@ const About = () => {
                 </div>
               </div>
 
-
             </div>
           </div>
         </div>
+
+        <div className="max-w-7xl ">
+          <div className='max-w-4xl mx-auto'>
+            <div className="overflow-x-auto  shadow-md rounded-lg">
+              <table className="table-auto w-full text-sm text-left text-gray-500">
+                <thead className="text-xs text-white">
+                  <tr>
+                    <th scope="col" className="px-6 py-3">
+                      API
+                    </th>
+                    <th scope="col" className="px-6 py-3">
+                      Android
+                    </th>
+                    <th scope="col" className="px-6 py-3">
+                      Type
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    { song: "33", artist: "> 6", type: "huawei,oppo,vivo,xiaomi, realme" },
+
+                  ].map((item, index) => (
+                    <tr
+                      key={index}
+                      className='text-white'
+                    >
+                      <td className="px-6 py-4">{item.song}</td>
+                      <td className="px-6 py-4">{item.artist}</td>
+                      <td className="px-6 py-4">{item.type}</td>
+
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
       </section>
 
 

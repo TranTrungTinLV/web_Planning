@@ -67,9 +67,12 @@ const OverView = () => {
 
             <div className='p-4 space-y-4' >
               <img src={qr_app} alt="" />
-              <p className='text-base text-gray-500 ml-2'>
-                Link app: <a href="http://surl.li/homybw" className='underline text-blue-400'>Tại đây</a>
+              <p className='text-base text-gray-500 ml-2' >
+                Link app: <a href="http://surl.li/homybw" target='_blank' className='underline text-blue-400'>Tại đây</a>
+
+
               </p>
+              <p className='text-base text-gray-500 ml-2'>GitHub source: <a href="https://github.com/TranTrungTinLV/iPlanning.git" className='underline text-blue-400' target='_blank'>Tại đây</a></p>
             </div>
 
 
