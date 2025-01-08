@@ -32,7 +32,7 @@ const OverView = () => {
                   Ứng dụng đa năng hỗ trợ người dùng trong việc lập kế hoạch và quản lý sự kiện một cách dễ dàng và hiệu quả. Được phát triển với các tính năng mạnh mẽ, ứng dụng tập trung vào việc đơn giản hóa các công việc thường ngày liên quan đến lập kế hoạch sự kiện.
                 </p>
                 <div className='flex justify-start mt-5  md:mt-5 md:justify-end  w-1/3'>
-                  <button onClick={handleOpenModal} className='bg-red-500 text-white px-3 py-2 w-max rounded-md' data-modal-target='modal' data-modal-toggle="modal"><a>
+                  <button onClick={handleOpenModal} className='bg-red-500 hover:p-3 text-white px-3 py-2 w-max rounded-md' data-modal-target='modal' data-modal-toggle="modal"><a>
                     Tải App</a>
                   </button>
                 </div>
