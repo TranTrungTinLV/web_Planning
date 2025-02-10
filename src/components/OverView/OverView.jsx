@@ -73,6 +73,8 @@ const OverView = () => {
 
               </p>
               <p className='text-base text-gray-500 ml-2'>GitHub source: <a href="https://github.com/TranTrungTinLV/iPlanning.git" className='underline text-blue-400' target='_blank'>Tại đây</a></p>
+              <p className='text-base text-gray-500 ml-2'>Resume Me: <a href="https://drive.google.com/file/d/18Ce5lND1cBP48bnnBGvU82gd8InYVIty/view?usp=drive_link" className='underline text-blue-400' target='_blank'>Tại đây</a></p>
+
             </div>
 
 
